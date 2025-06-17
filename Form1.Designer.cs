@@ -35,6 +35,7 @@
             txtWeight = new TextBox();
             lblCategory = new Label();
             lblResult = new Label();
+            testSpeedBtn = new Button();
             SuspendLayout();
             // 
             // btnCalculate
@@ -86,7 +87,6 @@
             lblCategory.Name = "lblCategory";
             lblCategory.Size = new Size(0, 25);
             lblCategory.TabIndex = 6;
-
             // 
             // lblResult
             // 
@@ -95,13 +95,23 @@
             lblResult.Name = "lblResult";
             lblResult.Size = new Size(0, 25);
             lblResult.TabIndex = 5;
-       
+            // 
+            // testSpeedBtn
+            // 
+            testSpeedBtn.Location = new Point(111, 346);
+            testSpeedBtn.Name = "testSpeedBtn";
+            testSpeedBtn.Size = new Size(112, 34);
+            testSpeedBtn.TabIndex = 7;
+            testSpeedBtn.Text = "Test Speed";
+            testSpeedBtn.UseVisualStyleBackColor = true;
+            testSpeedBtn.Click += testSpeedBtn_Click;
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(testSpeedBtn);
             Controls.Add(lblCategory);
             Controls.Add(lblResult);
             Controls.Add(txtWeight);
@@ -124,5 +134,6 @@
         private TextBox txtWeight;
         private Label lblCategory;
         private Label lblResult;
+        private Button testSpeedBtn;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,12 +21,14 @@ namespace BMICalculatorApp
 
         public BMICalculator(float height, float weight)
         {
+           
             this.Height = height;
             this.Weight = weight;
         }
 
         public float CalculateBMI()
         {
+            Thread.Sleep(100);
             if (Weight != 0 && float.IsNaN(Weight))
             {
                 throw new Exception("Weight not set correctly");
@@ -41,8 +44,8 @@ namespace BMICalculatorApp
         }
         public BMIType GetCategory()
         {
-            Bmi = CalculateBMI();           
-
+            
+            Bmi = CalculateBMI();
             if (Bmi < 18.5)
             {
                 return BMIType.Underweight;

@@ -1,3 +1,5 @@
+using System.Diagnostics;
+
 namespace BMICalculatorApp
 {
     public partial class Form1 : Form
@@ -5,7 +7,7 @@ namespace BMICalculatorApp
 
         private BMICalculator BMICalculator
         {
-            get;set;
+            get; set;
         }
         public Form1()
         {
@@ -33,6 +35,19 @@ namespace BMICalculatorApp
                 MessageBox.Show("Please enter valid numbers for height and weight.");
             }
 
+        }
+
+        private void testSpeedBtn_Click(object sender, EventArgs e)
+        {
+            Stopwatch sw = Stopwatch.StartNew();
+            for (int i = 0; i < 100; i++)
+            {
+                var bmi = new BMICalculator(1.6f + i * 0.01f, 60 + i);
+                bmi.CalculateBMI();
+                var result = bmi.GetCategory(); 
+            }
+            sw.Stop();
+            MessageBox.Show($"100 calculations took: {sw.ElapsedMilliseconds}ms");
         }
     }
 }
