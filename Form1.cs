@@ -2,9 +2,15 @@ namespace BMICalculatorApp
 {
     public partial class Form1 : Form
     {
+
+        private BMICalculator BMICalculator
+        {
+            get;set;
+        }
         public Form1()
         {
             InitializeComponent();
+            BMICalculator = new BMICalculator();
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
@@ -13,27 +19,14 @@ namespace BMICalculatorApp
             {
                 float height = float.Parse(txtHeight.Text);
                 float weight = float.Parse(txtWeight.Text);
+                BMICalculator.Weight = weight;
+                BMICalculator.Height = height;
 
-                float bmi = weight / (height * height);
+                float bmi = BMICalculator.CalculateBMI();
+                BMIType bMIType = BMICalculator.GetCategory();
+
                 lblResult.Text = "BMI: " + bmi.ToString("0.00");
-
-                // Categorise BMI
-                if (bmi < 18.5)
-                {
-                    lblCategory.Text = "Underweight";
-                }
-                else if (bmi < 25)
-                {
-                    lblCategory.Text = "Healthy";
-                }
-                else if (bmi < 30)
-                {
-                    lblCategory.Text = "Overweight";
-                }
-                else
-                {
-                    lblCategory.Text = "Obese";
-                }
+                lblCategory.Text = Enum.GetName(bMIType.GetType(), bMIType);
             }
             catch
             {
