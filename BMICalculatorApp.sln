@@ -5,8 +5,6 @@ VisualStudioVersion = 17.11.35327.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMICalculatorApp", "BMICalculatorApp.csproj", "{3BF16D45-3570-4C9D-9A6D-DFAD65AC1221}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BmiUnitTests", "..\BmiUnitTests\BmiUnitTests.csproj", "{92365333-EF93-4AE2-8269-37E6F6FE949A}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
 	ProjectSection(SolutionItems) = preProject
 		test.runsettings = test.runsettings
@@ -22,10 +20,6 @@ Global
 		{3BF16D45-3570-4C9D-9A6D-DFAD65AC1221}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BF16D45-3570-4C9D-9A6D-DFAD65AC1221}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BF16D45-3570-4C9D-9A6D-DFAD65AC1221}.Release|Any CPU.Build.0 = Release|Any CPU
-		{92365333-EF93-4AE2-8269-37E6F6FE949A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{92365333-EF93-4AE2-8269-37E6F6FE949A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{92365333-EF93-4AE2-8269-37E6F6FE949A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{92365333-EF93-4AE2-8269-37E6F6FE949A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
