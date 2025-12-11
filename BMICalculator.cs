@@ -9,6 +9,7 @@ namespace BMICalculatorApp
 {
     public class BMICalculator
     {
+        public float thingy { get; set; }
         public float Height { get; set; }
         public float Weight { get; set; }
 
